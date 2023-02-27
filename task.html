@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <style>
+          *{
+            background-color: lightgreen;
+          }
+            div{
+                
+                display: flex;
+                
+            }
+            h2{
+                color: #C92C6D;
+            }
+            option{
+                background-color: lightseagreen;
+                color: blue;
+            }
+            #Answer{
+                color:#F94A29;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div>
+        <h2>What are you doing </h2>
+        <select  id="synonyms" onchange="Meaning()">
+          <option value="none">None</option>
+          <option value="telugu">Telugu</option>
+          <option value="hindi">Hindi</option>
+          <option value="tamil">Tamil</option>
+          <option value="korean">Korean</option>
+          <option value="chinese" >Chinese</option>
+        </select>
+</div>
+<h1 id="Answer"></h1>
+<script>
+    function Meaning(){
+        var synonyms = document.getElementById("synonyms").value;
+        console.log("synonyms");
+        var Answer = document.getElementById("Answer");
+        switch(synonyms){
+            case "telugu":Answer.innerHTML="నువ్వేమి చేస్తున్నావు";break;
+            case "hindi":Answer.innerHTML="आप क्या कर रहे हैं";break;
+            case "tamil":Answer.innerHTML="நீ என்ன செய்து கொண்டிருக்கிறாய்";break;
+            case "korean":Answer.innerHTML="뭐하세요";break;
+            case "chinese":Answer.innerHTML="你在幹什麼";break;
+
+        }
+    }
+</script>
+    </body>
+</html>
